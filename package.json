@@ -1,56 +1,27 @@
 {
-    "name": "@akarui/aoi.panel",
-    "version": "0.0.9",
-    "description": "The aoi.panel module provides a panel component for the aoi.js library using express.",
-    "main": "src/index.js",
-    "scripts": {
-        "test": "node index.js"
-    },
-    "engines": {
-        "node": ">=16.9.0"
-    },
-    "files": [
-        "src",
-        "LICENSE",
-        "README.md"
-    ],
-    "keywords": [
-        "aoi.js",
-        "aoi.js panel",
-        "aoi.panel",
-        "panel",
-        "express",
-        "discord",
-        "discord bot panel",
-        "aoi",
-        "dbdjs",
-        "akarui",
-        "akaruidevelopment",
-        "dashboard"
-    ],
-    "bugs": {
-        "url": "https://github.com/AkaruiDevelopment/aoi.panel/issues"
-    },
-    "license": "MIT",
-    "dependencies": {
-        "body-parser": "^1.20.2",
-        "express": "^4.18.2",
-        "express-session": "^1.17.3",
-        "undici": "^6.4.0"
-    },
-    "devDependencies": {
-        "aoi.js": "^6.7.1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/AkaruiDevelopment/aoi.panel.git"
-    },
-    "author": {
-        "name": "Leref"
-    },
-    "maintainers": [
-        "Bumblebee-3",
-        "wiltark"
-    ],
-    "homepage": "https://github.com/AkaruiDevelopment/aoi.panel#readme"
+  "name": "aoi.panel-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "createjs-module": "^0.8.3",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
 }

@@ -1,103 +1,36 @@
-<p align="center">
-  <a href="https://panel.aoijs.org">
-    <img width="150" src="https://github.com/aoijs/website/blob/master/assets/images/aoipanel.png?raw=true" alt="aoi.panel">
-  </a>
-</p>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<h1 align="center">@aoijs/aoi.panel</h1>
+## Getting Started
 
-![npm](https://img.shields.io/npm/dt/@akarui/aoi.panel?color=blue&label=NPM%20Downloads&logo=npm&logoColor=Green)
-![GitHub](https://img.shields.io/github/license/AkaruiDevelopment/panel?color=blue&logo=github)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/AkaruiDevelopment/panel?color=blue&label=Git%20Version)
-![GitHub last commit](https://img.shields.io/github/last-commit/AkaruiDevelopment/panel?color=blue)
-![GitHub repo size](https://img.shields.io/github/repo-size/AkaruiDevelopment/panel)
-![GitHub forks](https://img.shields.io/github/forks/AkaruiDevelopment/panel?color=blue&style=social)
-![GitHub Repo stars](https://img.shields.io/github/stars/AkaruiDevelopment/panel?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/AkaruiDevelopment/panel?style=social)
-
-### Table of Contents
-
-- [Installation](#installation)
-    - [Setup](#setup)
-
-### Installation
+First, run the development server:
 
 ```bash
-npm i @aoijs/aoi.panel
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-![Login Page](./images/image.png)
-### Setup
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```javascript
-const {Panel} = require("@aoijs/aoi.panel")
-const {AoiClient} = require("aoi.js");
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-const client = new AoiClient({
-    intents: ["MessageContent", "Guilds", "GuildMessages"],
-    events: ["onMessage", "onInteractionCreate"],
-    prefix: "Discord Bot Prefix",
-    token: "Discord Bot Token",
-    database: {
-        type: "aoi.db",
-        db: require("@akarui/aoi.db"),
-        dbType: "KeyValue",
-        tables: ["main"],
-        securityKey: "a-32-characters-long-string-here",
-    }
-});
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-// Ping Command
-client.command({
-    name: "ping",
-    code: `Pong! $pingms`
-});
+## Learn More
 
-client.loadCommands("./commands/", true);
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-const panel = new Panel({
-  port:3000,//port
-  client:bot,//aoi.js client
-  accounts : "/panel.userconfig.js" //accounts file (for security reasons must be a separate file)
-})
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-panel.loadPanel();
+## Deploy on Vercel
 
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-#### Example userconfig file for panel:
-
-File: `panel.userconfig.js`
-```js
-module.exports = [
-    {
-        username: "administratorAccount",
-        password: "adminpassword",
-        perms: ["admin"]
-    }, {
-        username: "user",
-        password: "user",
-        perms: [ "startup"]
-    }
-]
-```
-##### Panel Main Page
-![Panel Main Page](./images/image2.png)
-##### Panel Code Editor
-![code editor](./images/image3.png)
-##### Panel Terminal
-![terminal](./images/image4.png)
-##### Panel Code evaluate
-![eval1](./images/image6.png)
-![eval2](./images/image5.png)
-
-
-### Making Custom Pages
-Panel uses the express.js framework. So all resources of express can be used while making custom pages e.t.c.
-```javascript
-const app = panel.app;
-app.get("/example", (req, res) => {
-    res.send("This is an example page.");
-})
-```
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
