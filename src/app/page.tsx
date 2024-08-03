@@ -4,8 +4,8 @@ import profilePic from '../img/aoipanel-banner.png';
 export default function Home() {
   return (
     <>
-      <div className="poe rounded-r-[20px] max-[600px]:rounded-r-[0px] bg-black bg-box content-around flex justify-start pl-25 max-[600px]:pl-0 max-[600px]:block">
-        <div className="flex min-[600px]:full flex-col justify-center mx-4 w-[460px] max-[600px]:mx-0 max-[600px]:px-6 h-[100vh] lg:px-8 rounded-[20px]">
+      <div className="poe rounded-tr-[20px] max-[600px]:rounded-r-[0px] bg-black bg-box content-around flex justify-start pl-25 max-[600px]:pl-0 max-[600px]:block">
+        <div className="flex min-[600px]:full flex-col justify-center mx-4 w-[460px] max-[600px]:mx-0 max-[600px]:px-6 h-[100vh] lg:px-8 rounded-[0px]">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <Image
               src={profilePic}
@@ -70,36 +70,40 @@ export default function Home() {
       {/* Header Section */}
       <div className="header">
         {/* Content before waves */}
+        <h1>
+          hello
+        </h1>
         <div className="inner-header flex">
+
           <div>
-          <svg
-            className="waves"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28"
-            preserveAspectRatio="none"
-            shapeRendering="auto"
-          >
-            <defs>
-              <path
-                id="gentle-wave"
-                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-              />
-            </defs>
-            <g className="parallax">
-              <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-              <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-              <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-              <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
-            </g>
-          </svg>
-        </div>
+            <svg
+              className="waves"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="0 24 150 28"
+              preserveAspectRatio="none"
+              shapeRendering="auto"
+            >
+              <defs>
+                <path
+                  id="gentle-wave"
+                  d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                />
+              </defs>
+              <g className="parallax">
+                <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
+              </g>
+            </svg>
+          </div>
           {/* Just the logo.. Don't mind this */}
-          
+
         </div>
 
         {/* Waves Container */}
-        
+
         {/* Waves end */}
       </div>
       {/* Header ends */}
